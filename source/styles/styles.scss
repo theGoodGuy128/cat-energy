@@ -1,0 +1,162 @@
+// /* GLOBAL */
+// @import "./common/variables.scss";
+// @import "./common/global.scss";
+@import "./common/fonts.scss";
+
+// /* BLOCKS */
+// @import "./blocks/header.scss";
+* {
+  font-family: "lato", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+.title {
+  font-family: "oswald", "Arial", sans-serif;
+  width: 100%;
+  font-weight: 400;
+  padding-left: 20px;
+  line-height: 60px;
+  font-size: 60px;
+  padding-left: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+
+p {
+  list-style-type: none;
+}
+
+.container {
+  width: 230px;
+  min-height: 280px;
+  position: relative;
+  padding-top: 140px;
+  counter-increment: how-to 1;
+  flex-grow: 0;
+}
+
+.container::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-color: #68b738;
+  top: 40px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.eat::before {
+  background-image: url(../../images/icon_leaf_first.svg);
+}
+
+.release::before {
+  background-image: url(../../images/Vector_second.svg);
+}
+
+.remember::before {
+  background-image: url(../../images/pribori.svg);
+}
+
+.mounth::before {
+  background-image: url(../../images/Vector_4rd.svg);
+}
+
+.how-work {
+  max-width: 1280px;
+  padding: 0 50px;
+}
+
+.container::after {
+  font-family: "oswald", "Arial", sans-serif;
+  content: counter(how-to);
+  display: block;
+  color: #f2f2f2;
+  font-size: 280px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  line-height: 1;
+}
+
+// START food-types
+.food-types {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  max-width: 1280px;
+  padding: 0 50px;
+}
+
+.food-types__title {
+  font-family: "oswald", "Arial", sans-serif;
+  width: 100%;
+  font-weight: 400;
+  padding-left: 100px;
+  line-height: 36px;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 0;
+}
+
+.food-types__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  color: black;
+  padding-right: 50px;
+}
+
+.food-types__link::after {
+  content: url(../../images/arrow.svg);
+  min-width: 32px;
+  height: 10px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.food-types__card {
+  position: relative;
+  flex-grow: 0;
+  width: 570px;
+  min-height: 374px;
+  position: relative;
+  background-color: #f2f2f2;
+  padding: 70px 50px 50px;
+}
+
+.food-types__card::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #68b738;
+  top: 40px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-types__card--diet::before {
+  content: url(../../images/cat.svg);
+}
+
+.food-types__card--mass::before {
+  content: url(../../images/pantera.svg);
+}
+
+// END food-types
