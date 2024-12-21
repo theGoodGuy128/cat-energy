@@ -1,2 +1,30 @@
 .navigation {
+  font-family: $oswald;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  @include container();
+
+  &__list {
+    @include list-reset();
+    display: flex;
+    gap: 33px;
+  }
+
+  &__item {
+    &--current {
+      position: relative;
+
+      &::after {
+        @include pseudo(100%, 2px, #ffffff);
+        bottom: -12px;
+      }
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    text-decoration: none;
+  }
 }
