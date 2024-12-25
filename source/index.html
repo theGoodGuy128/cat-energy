@@ -13,6 +13,14 @@
         <a class="navigation__logo logo">
           <img class="logo__img" src="#" alt="Cat Energy" />
         </a>
+        <!-- <a
+          class="navigation__burger @navigation__burger--opened burger"
+          href=""
+        ></a> -->
+
+        <div class="burger">
+          <span></span>
+        </div>
         <ul class="navigation__list">
           <li class="navigation__item navigation__item--current">
             <a class="navigation__link">Главная</a>
@@ -138,5 +146,13 @@
       </div>
       <a href="http://htmlacademy.ru">HTML Academy</a>
     </footer>
+    <script>
+      document.querySelector(".burger").addEventListener("click", function () {
+        this.classList.toggle("burger--active");
+        document
+          .querySelector(".navigation__list")
+          .classList.toggle("navigation__list--opened");
+      });
+    </script>
   </body>
 </html>

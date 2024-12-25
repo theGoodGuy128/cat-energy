@@ -7,6 +7,7 @@ $oswald: "oswald", "Arial", sans-serif;
 
 // Медиавыражения
 // TODO написать переменные для медиа выражений
-// $mobile: "max-width: 767px";
-// $tablet: "min-width: 768px";
-// $desktop: "min-width: 1280px";
+$mobile-only: "max-width: 767px";
+$min-tablet: "min-width: 768px";
+$max-tablet: "max-width: 1279px";
+$min-desktop: "(min-width: 1280px)";

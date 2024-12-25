@@ -14,13 +14,26 @@
 }
 
 @mixin container() {
-  width: 280px;
+  width: 100%;
   padding: 20px;
   margin: 0 auto;
 
   //   TODO дописать миксин для остальных разрешений
+  @media ($mobile-only) {
+    // только для мобильного
+    // background: #000;
+  }
 
-  //   @media $desktop {
-  //     width: 1220px;
-  //   }
+  @media ($min-tablet) {
+    // от планшета и выше
+  }
+
+  @media ($min-tablet) and ($max-tablet) {
+    // только для планшета
+  }
+
+  @media ($min-desktop) {
+    // для десктопа и выше
+    width: 1220px;
+  }
 }
