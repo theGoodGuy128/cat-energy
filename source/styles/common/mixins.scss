@@ -15,17 +15,17 @@
 
 @mixin container() {
   width: 100%;
-  padding: 20px;
+  padding: 0 20px;
   margin: 0 auto;
 
   //   TODO дописать миксин для остальных разрешений
   @media ($mobile-only) {
     // только для мобильного
-    // background: #000;
   }
 
   @media ($min-tablet) {
     // от планшета и выше
+    padding: 0 30px;
   }
 
   @media ($min-tablet) and ($max-tablet) {

@@ -2,6 +2,7 @@
   font-family: $oswald;
   font-size: 20px;
   text-transform: uppercase;
+  align-items: center;
   @include container();
 
   @media ($mobile-only) {
@@ -11,46 +12,10 @@
     justify-content: space-between;
   }
 
-  @media ($min-desktop) {
+  @media ($min-tablet) {
     display: flex;
     justify-content: space-between;
   }
-
-  // &__burger {
-  //   display: flex;
-  //   position: relative;
-  //   z-index: 50;
-  //   align-items: center;
-  //   justify-content: flex-end;
-  //   width: 30px;
-  //   height: 18px;
-
-  //   &::after,
-  //   &::before {
-  //     content: "";
-  //     position: absolute;
-  //     height: 2px;
-  //     width: 100%;
-  //     background-color: #000000;
-  //     transition: all 0.3s ease 0%;
-  //     display: block;
-  //   }
-
-  //   &::after {
-  //     bottom: 0;
-  //   }
-
-  //   &::before {
-  //     top: 0;
-  //   }
-
-  //   span {
-  //     height: 2px;
-  //     width: 80%;
-  //     transform: scale(1);
-  //     background-color: #000000;
-  //   }
-  // }
 
   &__list {
     @include list-reset();
@@ -91,8 +56,11 @@
 
       &::after {
         @media ($min-tablet) {
-          @include pseudo(100%, 2px, #ffffff);
+          @include pseudo(100%, 2px, #68b738);
           bottom: -12px;
+        }
+        @media ($min-desktop) {
+          background-color: #ffffff;
         }
       }
     }
@@ -102,9 +70,17 @@
     color: #ffffff;
     text-decoration: none;
     font-family: $oswald;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1;
 
-    @media ($mobile-only) {
-      color: #000000;
+    @media ($min-tablet) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media ($min-desktop) {
+      color: #ffffff;
     }
   }
 }
