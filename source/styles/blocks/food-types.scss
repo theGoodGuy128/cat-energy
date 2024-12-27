@@ -1,72 +1,102 @@
 .food-types {
-  @media ($min-desktop) {
-    display: flex;
-    justify-content: space-between;
-    align-self: flex-start;
-    max-width: 1280px;
-    padding: 0 50px;
+  @include container();
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
 
-    &__title {
-      font-family: "oswald", "Arial", sans-serif;
-      width: 100%;
-      font-weight: 400;
-      padding-left: 100px;
+  &__title {
+    font-family: "oswald", "Arial", sans-serif;
+    width: 100%;
+    font-weight: 400;
+    padding-left: 91px;
+    line-height: 37px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 36px;
+
+    @media ($min-desktop) {
       line-height: 36px;
       font-size: 36px;
-      text-transform: uppercase;
-      text-align: center;
       margin-bottom: 70px;
-      margin-top: 0;
     }
-    &__link {
-      text-transform: uppercase;
-      text-decoration: none;
-      position: relative;
-      color: black;
-      padding-right: 50px;
+  }
 
-      &::after {
-        content: url(../../images/arrow.svg);
-        min-width: 32px;
-        height: 10px;
-        display: flex;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
+  &__desc {
+    font-size: 14px;
+    line-height: 18px;
+    position: relative;
+    padding-bottom: 23px;
+    margin-bottom: 15px;
+
+    &::after {
+      @include pseudo(100%, 1px, #d9d9d9);
+      bottom: 0;
     }
-    &__card {
-      position: relative;
-      flex-grow: 0;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    color: black;
+    padding-right: 50px;
+
+    &::after {
+      content: url(../../images/arrow.svg);
+      min-width: 32px;
+      height: 10px;
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__card {
+    position: relative;
+    flex-grow: 0;
+    background-color: #f2f2f2;
+    padding: 30px 20px 20px;
+
+    @media ($min-desktop) {
       width: 570px;
       min-height: 374px;
-      position: relative;
-      background-color: #f2f2f2;
-      padding: 70px 50px 50px;
+    }
 
-      &__:before {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 100px;
-        background-color: #68b738;
-        top: 40px;
-        position: absolute;
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    &:before,
+    &:after {
+      top: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      &--diet::before {
-        content: url(../../images/cat.svg);
-      }
+    &:before {
+      @include pseudo(50px, 50px, #68b738);
+      border-radius: 50%;
+    }
 
-      &--mass::before {
-        content: url(../../images/pantera.svg);
-      }
+    &:after {
+      @include pseudo(36px, 50px, transparent);
+      background-size: contain;
+    }
+
+    &--diet::after {
+      left: 28px;
+      top: 28px;
+      background-image: url(../../images/cat.svg);
+    }
+
+    &--mass::after {
+      left: 11px;
+      top: 40px;
+      width: 67px;
+      height: 28px;
+      background-image: url(../../images/pantera.svg);
     }
   }
 }
