@@ -1,0 +1,64 @@
+.example {
+  @include container();
+  display: flex;
+  flex-direction: column;
+  background-color: $gray;
+
+  &__title {
+    font-family: $oswald;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__information {
+    color: $main-text-color;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__table {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  &__table-item {
+    outline: 1px solid #cdcdcd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    position: relative;
+
+    span {
+      font-family: $oswald;
+      font-size: 24px;
+      line-height: 1;
+      padding: 15px 0 15px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 1;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: $gray;
+      position: absolute;
+      width: 80px;
+      bottom: -18px;
+    }
+  }
+
+  &__amount {
+    font-family: $oswald;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+
+    span {
+      font-family: inherit;
+    }
+  }
+}

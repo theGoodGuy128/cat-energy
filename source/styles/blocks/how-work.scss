@@ -1,0 +1,47 @@
+.how-work {
+  @include container();
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: $oswald;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__list {
+    @include list-reset();
+  }
+
+  &__item {
+    font-size: 14px;
+    line-height: 18px;
+    color: $main-text-color;
+    padding-left: 80px;
+    position: relative;
+
+    &:after {
+      @include pseudo(60px, 60px, #68b738);
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--eat::after {
+      background-image: url(../../images/List.svg);
+    }
+
+    &--release::after {
+      background-image: url(../../images/Wash.svg);
+    }
+
+    &--remember::after {
+      background-image: url(../../images/Eat.svg);
+    }
+
+    &--mounth::after {
+      background-image: url(../../images/clocks.svg);
+    }
+  }
+}
