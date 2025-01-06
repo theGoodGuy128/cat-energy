@@ -11,7 +11,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation__logo logo">
-          <img class="logo__img" src="#" alt="Cat Energy" />
+          <img class="logo__img" src="/images/logo.svg" alt="Cat Energy" />
         </a>
         <!-- <a
           class="navigation__burger @navigation__burger--opened burger"
@@ -123,36 +123,44 @@
             <span class="">Затраты на питание:</span>
             <span class="">15 000 руб.</span>
           </div>
-          <img class="example__image" src="#" alt="Котэ" />
+          <img
+            class="example__image"
+            src="/images/cat-slider-mobile.png"
+            alt="Котэ"
+          />
         </div>
       </section>
       <section class="contacts">
+        <div class="contacts__container">
+          <span>Приглашаем к&nbsp;сотрудничеству дилеров!</span>
+          <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Af104555f0d3a2912ccc21fcb7d509ae4279d62bdfd3f2a6be28492316353e2c0&amp;source=constructor"
           width="100%"
           height="400"
           frameborder="0"
         ></iframe>
-        <div class="contacts__container">
-          <span>Приглашаем к сотрудничеству дилеров!</span>
-          <address>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-        </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo logo">
-        <img class="logo__img" src="#" alt="" />
+        <img class="logo__img" src="/images/logo.svg" alt="" />
       </div>
       <div class="page-footer__socials">
-        <a class="page-footer__social page-footer__social--vk" href="">VK</a>
-        <a class="page-footer__social page-footer__social--youtube" href=""
-          >YouTube</a
+        <a class="page-footer__social page-footer__social--vk" href="">
+          <span class="visually-hidden">Вконтакте</span></a
         >
-        <a class="page-footer__social page-footer__social--telegram"
-          >Telegram</a
+        <a class="page-footer__social page-footer__social--youtube" href="">
+          <span class="visually-hidden">YouTube</span></a
+        >
+        <a class="page-footer__social page-footer__social--telegram">
+          <span class="visually-hidden">Telegram</span></a
         >
       </div>
-      <a href="http://htmlacademy.ru">HTML Academy</a>
+      <a class="page-footer__academy" href="http://htmlacademy.ru"
+        >HTML Academy</a
+      >
     </footer>
     <script>
       document.querySelector(".burger").addEventListener("click", function () {

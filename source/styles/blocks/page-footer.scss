@@ -1,0 +1,71 @@
+.page-footer {
+  @include container();
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__logo {
+    display: flex;
+    margin-bottom: 20px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px 0;
+    position: relative;
+
+    &::before {
+      @include pseudo(100%, 1px, #d9d9d9);
+      top: 0;
+    }
+
+    &::after {
+      @include pseudo(100%, 1px, #d9d9d9);
+      bottom: 0;
+    }
+  }
+
+  &__social {
+    width: 28;
+    height: 22px;
+    position: relative;
+    display: block;
+
+    &::after {
+      @include pseudo(27px, 17px, transparent);
+    }
+    &--vk::after {
+      content: url(../../images/VK.svg);
+    }
+    &--youtube::after {
+      width: 24px;
+      height: 19px;
+      content: url(../../images/youtube.svg);
+    }
+    &--telegram::after {
+      width: 19px;
+      height: 17px;
+      content: url(../../images/tg.svg);
+    }
+  }
+
+  &__academy {
+    text-decoration: none;
+    color: #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    &::after {
+      @include pseudo(27px, 34px, transparent);
+      position: relative;
+      content: url(../../images/htmlacademy.svg);
+    }
+  }
+}

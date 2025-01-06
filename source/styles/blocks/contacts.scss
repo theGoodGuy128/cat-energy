@@ -1,0 +1,26 @@
+.contacts {
+  @include container();
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    margin: 20px 0;
+
+    span {
+      font-family: $oswald;
+      font-size: 16px;
+      line-height: 20px;
+      color: #111111;
+    }
+    address {
+      font-family: $lato;
+      font-size: 14px;
+      line-height: 20px;
+      color: #444444;
+      font-style: normal;
+    }
+  }
+}
