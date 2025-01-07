@@ -4,4 +4,8 @@
   @media ($mobile-only) {
     height: 60px;
   }
+
+  @media ($min-tablet) {
+    padding: 20px 0;
+  }
 }
